@@ -161,48 +161,60 @@
 
 
 
-// This array stores multiple images, but that image needs to be loaded
-let images = [];
+// // This array stores multiple images, but that image needs to be loaded
+// let images = [];
 
-// The current image to be shown (arrays go from 0 to array.length - 1)
-let currentImage = 0;
+// // The current image to be shown (arrays go from 0 to array.length - 1)
+// let currentImage = 0;
 
-// This variable is true when the code first starts running
-let firstRun = true;
+// // This variable is true when the code first starts running
+// let firstRun = true;
+
+// function draw_one_frame(words, vocal, drum, bass, other, counter) {
+//   // This checks if this is the first time the code is running
+//   // We do this because we only need to load the image one time
+//   if (firstRun) {
+
+//     // This loads in the images and then "pushes" them onto the array
+//     images.push(loadImage("myImage1.png"));
+//     images.push(loadImage("myImage2.png"));
+//     images.push(loadImage("myImage3.png"));
+//     images.push(loadImage("myImage4.png"));
+
+//     // This makes it so this part of the code does not run again
+//     firstRun = false;
+//   }
+
+//   background(0);
+
+//   // Run if the counter is bigger than 0
+//   if (counter > 0) {
+//     // Draw image
+//     image(images[currentImage], 0, 0);
+
+//     // Every time counter is a multiple of 50, change to next frame
+//     if (counter % 50 == 0) {
+//       currentImage++;
+//     }
+    
+//     // If the current image number is bigger than or equal to the length of the
+//     // array, reset the counter 
+//     if (currentImage >= images.length) {
+//       currentImage = 0;
+//     }
+//     console.log(currentImage)
+    
+//   }
+// }
 
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
-  // This checks if this is the first time the code is running
-  // We do this because we only need to load the image one time
-  if (firstRun) {
-
-    // This loads in the images and then "pushes" them onto the array
-    images.push(loadImage("myImage1.png"));
-    images.push(loadImage("myImage2.png"));
-    images.push(loadImage("myImage3.png"));
-    images.push(loadImage("myImage4.png"));
-
-    // This makes it so this part of the code does not run again
-    firstRun = false;
+  if (counter > 0 && counter < 400) {
+    // do stuff when counter is bigger than 0 but smaller than 400
+  }
+  else if (counter > 400 && counter < 1000) {
+    // do something else when counter is bigger than 400 but smaller than 800
   }
 
-  background(0);
+  // other parts of code
 
-  // Run if the counter is bigger than 0
-  if (counter > 0) {
-    // Draw image
-    image(images[currentImage], 0, 0);
-
-    // Every time counter is a multiple of 50, change to next frame
-    if (counter % 50 == 0) {
-      currentImage++;
-    }
-    
-    // If the current image number is bigger than or equal to the length of the
-    // array, reset the counter 
-    if (currentImage >= images.length) {
-      currentImage = 0;
-    }
-    console.log(currentImage)
-    
-  }
 }
