@@ -220,11 +220,134 @@
 // }
 
 
+
+let firstRun = true
+let yMove = 0;
+let yMove_2 = 0;
+let yMove_3 = 0;
+let yMove_4 = 0;
+let xMove = 0;
+let seconds;
+
+
+// vocal, drum, bass, and other are volumes ranging from 0 to 100
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
 
-  // I have no idea how this works lmao
-  background(20);
-  rotateX(counter);
-  rotateY(counter);
-  box(100);
+
+  
+
+  colorMode(HSB, 100)
+  //background(words,20,20);
+
+  // let MyBlue = color(160, 194, 250)
+  // let MyYellow = color(190, 250, 170)
+
+  // let interA = lerpColor(MyBlue,MyYellow,0.2)
+  
+
+
+  // background(60,50,vocal);
+  background(10);
+
+
+  
+
+  //rain drop
+  fill(100);
+  ellipse(100, yMove, 3, 3);
+  ellipse(800, yMove, 3, 3);
+  ellipse(450, yMove, 3, 3);
+  
+  if (counter > 0) {
+    yMove = yMove + 1;
+    if (yMove > 400) {
+      yMove = 0;
+    }
+  }
+  else {
+    yMove = 0;
+  }
+  
+  //another part of raindrop 2
+  ellipse(700, yMove_2, 3, 3);
+
+  if (counter > 0) {
+    yMove_2 = yMove_2 + 1;
+    if (yMove_2 > 200) {
+      yMove_2 = 1;
+    }
+  }
+  else {
+    yMove_2 = 1;
+  }
+
+
+
+  //another part of raindrop 3
+  ellipse(300, yMove_3, 3, 3);
+
+  if (counter > 0) {
+    yMove_3 = yMove_3 + 1;
+    if (yMove_3 > 600) {
+      yMove_3 = 2;
+    }
+  }
+  else {
+    yMove_3 = 2;
+  }
+
+
+
+  //another part of raindrop 4
+  ellipse(500, yMove_4, 3, 3);
+
+  if (counter > 0) {
+    yMove_4 = yMove_4 + 1;
+    if (yMove_4 > 700) {
+      yMove_4 = 3;
+    }
+  }
+  else {
+    yMove_4 = 3;
+  }
+
+
+  //another part of raindrop 5
+  ellipse(850, yMove_4, 3, 3);
+
+  if (counter > 0) {
+    yMove_4 = yMove_4 + 1;
+    if (yMove_4 > 800) {
+      yMove_4 = 3;
+    }
+  }
+  else {
+    yMove_4 = 3;
+  }
+
+
+  seconds = counter / 60;
+
+  // The mark of rain on the water
+  if (seconds % 5 == 0) {
+  ellipse(500, 700, xMove, 10);
+
+  //  if (counter > 0) {
+  //   xMove = xMove + 1;
+  //   if (xMove > 100) {
+  //     xMove = 0;
+  //   }
+  }
+  else {
+    xMove = 0;
+  //}
+  }
+
+  fill(255,0,0)
+
+  //// image fill the screen
+
+
+
+  //   
 }
