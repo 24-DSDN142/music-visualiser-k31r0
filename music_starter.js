@@ -207,14 +207,24 @@
 //   }
 // }
 
+// function draw_one_frame(words, vocal, drum, bass, other, counter) {
+//   if (counter > 0 && counter < 400) {
+//     // do stuff when counter is bigger than 0 but smaller than 400
+//   }
+//   else if (counter > 400 && counter < 1000) {
+//     // do something else when counter is bigger than 400 but smaller than 800
+//   }
+
+//   // other parts of code
+
+// }
+
+
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
-  if (counter > 0 && counter < 400) {
-    // do stuff when counter is bigger than 0 but smaller than 400
-  }
-  else if (counter > 400 && counter < 1000) {
-    // do something else when counter is bigger than 400 but smaller than 800
-  }
 
-  // other parts of code
-
+  // I have no idea how this works lmao
+  background(20);
+  rotateX(counter);
+  rotateY(counter);
+  box(100);
 }
